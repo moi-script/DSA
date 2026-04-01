@@ -11,8 +11,6 @@ class Node {
 //     value : "value",
 //     next : "null"
 // }
-
-
 class LinkedList {
     constructor() {
         this.head = null;
