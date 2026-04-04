@@ -191,28 +191,17 @@ const testInsert = {
 
 
 linkedlist.push(response);
-linkedlist.push(response);
-linkedlist.unshift(response2);
+linkedlist.push(response2);
+linkedlist.push(testInsert);
+
+// linkedlist.push(response);
+// linkedlist.unshift(response2);
 
 // linkedlist.insert(1, testInsert);
 
-console.log("Results :: ", linkedlist);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log("Results :: ", linkedlist.head.next.prev.next);
+// console.log("Results :: ", linkedlist.head.next.prev.next);
+// console.log("Results :: ", linkedlist.head.next.next);
 
 
 
@@ -244,7 +233,6 @@ function printLinkListForward(list) {
 
     console.log("Result :: ", result);
 }
-
 
 function printLinkListBackward(list) {
     let result = "";
