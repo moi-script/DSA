@@ -1,0 +1,80 @@
+
+// Constant  0(2n) | 0(500n) | -> 0(n) we only care about n as the input grows
+// -> Drop Non Dominant Terms -> 0(n^2 + n) -> 0(n^2)
+
+
+// linear
+// logarithmic
+// polynomial
+// exponential
+// factorial
+
+
+// Ranking By the most fastest time
+
+// Constant 0(1)
+// Examples :
+// Hash Table -> Map / Object
+// Stack Operations :  push or pop
+// Queue Operations : deque 
+
+
+// Logarithmic  0(nlogn)
+// Examples : 
+// Binary Search Tree (BST) -> Searching Inserting or deleting a node like (AVL tree, Red Black Tree)
+// Heap Operation -> Inserting / Extracting minimum/max value from priority queue
+// Exponentianion by Squaring 
+
+
+// Linear 0(n)
+// Exampels : 
+// Linear Seach -> Loops to search from unsorted array or linked list
+// Finding Min/Nax -> search for max or min value
+
+
+
+// Polynomial 0(n^2) 
+// Examples : 
+// Quadratic -> 0(n^2) -> Basic Sorting Algorithm :
+// Bubble Sort, Insertion Sort, Selection Sort, 
+// --> 2d Matrix Traversal
+
+
+
+
+// Cubic 0(n^3)
+// Examples : 
+// Floyd-Marshall Algorithm : finding the shortest path between all pairs of nodes in a weighted paragraphs
+// Naive Matrix Multiplication : Multiplying two matrices together using standard nested loops 
+
+
+
+
+// Exponential 0(C^n)
+// Examples : 
+// Tower of Hanoi
+// Power set generations 
+// Back tracking algorithm   
+
+
+
+
+// Factorial ->  The worst dont do it 
+ 
+
+// time vs space complexity 
+
+// -> Time | Execution and Efficiency of an algorithm
+// -> Space | How much the extra memory in RAM that require for the growing input of a program
+
+
+// how to calculate complexity
+
+
+// Asymptotic Notation
+// Big O notation -> The Upper Bound | The worst case scenario
+// Big Omega notation -> The Lower Bound | Best case scenario
+// Big Theta notation -> The Tight Bound | Average Case scenario
+
+
+

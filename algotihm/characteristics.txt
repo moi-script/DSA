@@ -1,0 +1,10 @@
+Characteristics of Algorithm - Donald Knuth
+
+ input -> 0 or More
+ output -> atleast 1 output
+ definiteness -> square root of neg 1
+ finiteness -> will stop 
+ effectiveness -> be effective
+
+
+
