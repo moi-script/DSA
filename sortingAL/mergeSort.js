@@ -1,19 +1,19 @@
 
 function merge(left, right) {
     let result = [];
-    console.log("From merge fn :: ", left);
-    console.log("From merge fn :: ", right);
+    // console.log("From merge fn :: ", left);
+    // console.log("From merge fn :: ", right);
     
 
     let leftIndex = 0;
     let rightIndex = 0;
 
     while (leftIndex < left.length && rightIndex < right.length) {
-        console.log('Left Index :: ', leftIndex);
-        console.log('Left value from index :: ', left[leftIndex]);
+        // console.log('Left Index :: ', leftIndex);
+        // console.log('Left value from index :: ', left[leftIndex]);
 
-        console.log('Right Index :: ', rightIndex);
-        console.log('Right value from index :: ', right[rightIndex]);
+        // console.log('Right Index :: ', rightIndex);
+        // console.log('Right value from index :: ', right[rightIndex]);
         if (left[leftIndex] < right[rightIndex]) {
 
 
@@ -27,7 +27,13 @@ function merge(left, right) {
             rightIndex++;
         }
     }
-    return [...result, ...left.slice(leftIndex), ...right.slice(rightIndex)];
+
+
+    console.log('Right slice :: ',...right.slice(rightIndex))
+    console.log('Left slice :: ', ...left.slice(leftIndex))
+
+    
+    return [ ...result, ...right.slice(rightIndex), ...left.slice(leftIndex) ];
 }
 
 
@@ -35,15 +41,17 @@ function mergeSort(arr) {
     if (arr.length <= 1) return arr;
 
     const mid = Math.floor(arr.length / 2);
-    console.log(mid)
+    // console.log(mid)
 
     const left = arr.slice(0, mid);
-    console.log("left ::", left);
+    // console.log("left ::", left);
     const right = arr.slice(mid);
-    console.log("Right ::", right);
+    // console.log("Right ::", right);
 
 
-    return merge(mergeSort(left), mergeSort(right));
+    const res = merge(mergeSort(left), mergeSort(right)) 
+    console.log("Res ::", res);
+    return res;
 }
 
 const numbers = [38, 27, 43, 3, 9, 82, 10];

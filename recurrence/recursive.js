@@ -29,6 +29,6 @@ function getLoops(fnList){
 
 }
 
-getLoops(loops(iterationCount, fnList, undefined))
+// getLoops(loops(iterationCount, fnList, undefined))
 
-console.log(typeof undefined);
+// console.log(typeof undefined);
