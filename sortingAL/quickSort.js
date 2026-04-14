@@ -38,17 +38,55 @@ function partition(arr, low, high) {
     console.log("I -> ", i);
     
     // Step 2: Compare each element to the pivot
+
+    // [3, 5, 2, 10, 9]
+
+    // pivot == 9;
+    // i = -1;
+    // j = 0
+    // arr[j] == 3
+    //  3 <= 9
+
+    // i == 0;
+
+
+    // arr[i] === 3
+    // arr[j] === 3
+    
+
+    // arr[j] === 3
+    // arr[i] === 3
+
+    // arr[j] === 5;
+    // 5 <= 9
+    // i === 1
+    // arr[i] === 5
+    // arr[j] === 5 
+
+
+
+
+
+
+
     for (let j = low; j < high; j++) {
         if (arr[j] <= pivot) {
             // If smaller, move the boundary forward and swap
             i++;
+
+            
             // ES6 Destructuring assignment to swap elements
 
+            console.log("I --> ", i)
+            console.log("J --> ", j)
 
             console.log('arr[i]', arr[i]);
             console.log('arr[j]', arr[j]);
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+
+        
+        console.log('Skip --> ', j);
     }
     
     // Step 3: Place the pivot in its correct sorted position
@@ -59,7 +97,7 @@ function partition(arr, low, high) {
 }
 
 // --- Example Usage ---
-const myArray = [3, 5, 2, 10, 9];
+const myArray = [3, 12, 2, 10, 9];
 console.log("Original Array:", myArray);
 
 quickSort(myArray);
