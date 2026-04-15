@@ -27,6 +27,5 @@ function selectionSort(arr) {
     return arr;
 }
 
-// --- Example Usage ---
 const myArray = [29, 10, 14, 37, 13];
 console.log("Sorted Array:", selectionSort(myArray));
