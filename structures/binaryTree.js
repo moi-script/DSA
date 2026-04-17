@@ -22,7 +22,7 @@ class BinarySearchTree {
 
         let current = this.root;
         
-        while (true) {
+        while (true) { // automatic arrange the tree base on their value
             if (value === current.value) return this;
 
             if (value < current.value) {
@@ -30,7 +30,7 @@ class BinarySearchTree {
                     current.left = newNode;
                     return this;
                 }
-                current = current.left; 
+                current = current.left;  
             } 
             else {
                 if (current.right === null) {
@@ -56,6 +56,7 @@ class BinarySearchTree {
                 return true; 
             }
         }
+        
         return false;
     }
 }
