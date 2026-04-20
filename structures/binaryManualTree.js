@@ -49,37 +49,37 @@ console.log(rootNode);
 
 // O(log n) for balanced trees, O(n) for unbalanced (skewed) trees.
 function  insertNode(value) {
-    const newNode = new Node(value);
+    const newNode = new Node(value); // create new node whhen 
 
-    const current =  this.root;
-    if(current === null) {
+    const current =  this.root; // select the root
+    if(current === null) { //  check if the root is null 
         current = newNode;
         return this;
     }
-    while(true) {
-        if(value === current.value) return this;
 
 
-        if(value < current.value) {
-            if(current.left === null) {
+
+    while(true) { // a loop will run as long nothing breaks or returns
+        if(value === current.value) return this; // condition if it contains similar value 
+
+        if(value < current.value) {   // if the value is lessthan to the left of selected node, 
+            if(current.left === null) { // also if left side of that node is nothing then set then the newnode
                 current.left = newNode;
-
-                return this;
+                return this; // return
             }
 
-            current = current.left;
+            current = current.left; // other wise, select it and will do the loop again  
         }
 
-        else  {
-            if(current.right === null) {
-                current.right = newNode;
-                return this;
+        else  { // if value is greater than the selected node value
+            if(current.right === null) { // if the right part of selected node is nothing 
+                current.right = newNode; // then set the newnode it to that right part
+                return this; // return
             }
-            current = current.right;
+            current = current.right; // otherwise select the node to right
         }
     }
 }
-
 
 
 // search
@@ -125,7 +125,7 @@ function inOrder (node)  {
 
 
 // pre order
-function inOrder (node)  {
+function preOrder (node)  {
     if(node) {
         console.log(node.value) // root
         inOrder(node.left); // left
@@ -136,7 +136,7 @@ function inOrder (node)  {
 
 
 // post order
-function inOrder (node)  {
+function postOrder (node)  {
     if(node) {
         inOrder(node.left); // left
         inOrder(node.right) // right
@@ -158,7 +158,6 @@ function levelOrder (root)  {
         if(currentNode.left) queue.push(currentNode.left);
         if(currentNode.right) queue.push(currentNode.right);
         
-
     }
 }
 

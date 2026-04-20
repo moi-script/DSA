@@ -1,27 +1,27 @@
-class Node {
+class Node { // set the node for avl 
   constructor(key) {
-    this.key = key;
+    this.key = key; 
     this.left = null;
     this.right = null;
     this.height = 1;
   }
 }
 
-class AVLTree {
-  getHeight(node) {
+class AVLTree { 
+  getHeight(node) { // get height function
     return node ? node.height : 0;
   }
 
-  getBalance(node) {
+  getBalance(node) { // this will look if tree is balance or unbalance if right or left subtree is not the same 
     return node ? this.getHeight(node.left) - this.getHeight(node.right) : 0;
   }
 
-  rightRotate(y) {
-    let x = y.left;
-    let T2 = x.right;
+  rightRotate(y) { // right part
+    let x = y.left; // get the left  
+    let T2 = x.right; // get the right of that left
 
-    x.right = y;
-    y.left = T2;
+    x.right = y; // assign the right of the left of y to new value 
+    y.left = T2; // assign the  left of y to the right of the left of y  
 
     y.height = Math.max(this.getHeight(y.left), this.getHeight(y.right)) + 1;
     x.height = Math.max(this.getHeight(x.left), this.getHeight(x.right)) + 1;
